@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"cs3500.hw01.duration"},{"l":"cs3500.hw01.publication"}]
