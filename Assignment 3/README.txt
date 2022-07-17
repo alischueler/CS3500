@@ -1,0 +1,7 @@
+ - added more comprehensive tests based on self-eval questions and grader feedback
+ - changed isGameOver() to include if there are still draw cards left then the game is not over
+ - added better JavaDoc comments for Classes
+ - changed one helper method to private that should not have been public
+ - updated the checkValid method to check if the card was "empty" not only null or a duplicate
+ - updated the way the draw cards are counted and draw cards that have been removed are stored
+ - updated the constructor to initialize the startGame field to false
