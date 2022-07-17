@@ -1,0 +1,15 @@
+Another design choice we could have made would have been to put the timer inside the views, thus
+decoupling the controller from java swing in case it was to be reused with a different GUI.
+We could have also used a Features interface that did not extend ActionListener (as our
+IButtonListener did). This would have also decoupled the controller from Java swing. Both of these
+observations came from design choices of the providers. Our clients did not ever respond to any
+email we sent to them so there were no updates made for them aside from resending code that had
+bad java style in one class. Before sending them our code, we did update it so that all of the
+smaller classes in the model have interfaces and any reference to the classes was changed to
+now reference the interface.
+
+Our experience with our provider went decently well. At first, we were unaware at least one
+of them is in a different time zone and that is why responses may have been late. However,
+they did not ever send their README file and it took a day or so after the deadline to send
+code, to get all necessary files for the view. We also asked them for clarification on a few methods
+and reasoning in their view along with bug fixes and never heard back.

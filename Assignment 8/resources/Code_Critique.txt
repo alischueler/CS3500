@@ -1,0 +1,51 @@
+
+The interfaces we were given were flexible. It was simple to adapt because the purposes lined
+up well with the general purposes we had used in our implementations. The viewModel Interface
+was flexible to adapt with our model because it never referenced any obscure types that they
+used elsewhere, specific to their implementations.
+
+
+The interactive view works just as expected. However, to make the interactive view better
+they could have limited the window size. This would make the animation look nicer and allow
+for a better user experience. The textual view also had some issues. The time was an int so
+there were no decimal places to show the client precise times of the animation these motions
+would be made. Another issue is that the width and the hight were flipped in one of their helper
+methods, thus flipping the width and height String values in the output. Based on Assignment 5
+and 6 examples, this seemed like an issue to us as it was clearly stated in the assignment the
+order the motions the shapes values should be in. Other than these issues, the group implemented
+functionality we did not (as we did  not think it was necessary) but it did not hurt the output.
+
+
+It was easy to reuse the providers code, most of the methods they used in the viewModel
+were easily matched with methods we had in our model. This was good because we only had
+ to adapt their view model and not their model which saved a lot of duplicate code writing.
+ It was interesting to adapt their Features interface because they stated it was their controller,
+ while we had created an actual controller interface with implementations of it and a separate
+ interface and implementation for listeners. However, the helper objects for the model Shapes,
+ Moves, etc were sometimes confusing and provided extra functionality that was not always
+ necessary. The view also followed along this path. For example in order to render an
+ animation you have to use an object of type ViewShapes. ViewShapes provides methods for
+ making the SVG and rendering a visual/interactive view. However, if you only wanted to
+ make the visual view you were forced to implement methods which support the SVG. Besides
+ this their code was relatively easy to use.
+
+
+The methods provided to us were often long and sometimes hard to follow.
+ A suggestion could be to use (many) helper methods to break up code and make each method
+ follow a specific purpose. We were never given the group's README file so we had to mainly
+ go off java docs which were mostly written well but some methods did not have any. It also
+ seems like their code is slightly inefficient as each tick a new instance of every shape is
+ created instead of updating the current one. This isn't an issue with most of the provided
+ .txt files but the lag can be seen in the big-bang-big-crunch.txt animation.
+
+
+We requested they change their toString() in their ShapeState class to have width
+going before height as we believed this was the correct way to order the textual output
+based on past assignment examples. We also asked that they not cast the tick / tempo value
+back to an int before appending it onto their output as this defeats the purpose of displaying
+the time in the text output as opposed to the tempo itself. However, they did not ever get back
+to us and we were forced to leave these issues as is. We also requested they fix a bug only
+noticable in the buildings.txt file. When the animation restarts the stars (ellipses) are never
+removed from the screen because they are never removed or updated from the list of shapes to draw in
+ their drawPanel method drawShapes (Line 42-50) until their first command at tick 108.
+
